@@ -55,7 +55,7 @@ class DETRTransformer(nn.Module):
         self.query_embed = nn.Embedding(num_queries, d_model)
         
         # Transformer
-        self.transformer = SimplifiedTransformer(
+        self.transformer = Transformer(
             d_model=d_model,
             nhead=nhead,
             num_encoder_layers=num_encoder_layers,
